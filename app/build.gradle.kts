@@ -1,4 +1,6 @@
 plugins {
+// NEW: switch Safe Args on for this app.
+// It must come BELOW the android.application line
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
 }
@@ -38,6 +40,8 @@ android {
 }
 
 dependencies {
+    implementation("androidx.navigation:navigation-fragment-ktx:2.9.8")
+    implementation("androidx.navigation:navigation-ui-ktx:2.9.8")
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.activity.ktx)
